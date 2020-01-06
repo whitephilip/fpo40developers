@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>silder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">News</a></li>
+            </ul>
+        </nav>
+        <button type="button" onclick="myFunction()">touch it</button>
+    </div>
+    <div id="silder">
+        <figure>
+            <img src="image/logo.png">
+        </figure>
+    </div>
+    <form name="myForm" action="form.asp"
+    onsubmit="return validateForm()" method="POST">
+   Name: <input type="text" name="fullname"><br>
+   Email: <input type="email" name="email"><br>
+   Password: <input type="text" name="hidden"><br>
+   <input type="submit" value="login">
+</form>
+    <script>
+        function myFunction() {
+
+    document.getElementById("header").innerHTML ="header changed.";
+    }
+
+    function validateForm() {
+        var x = document.forms["myForm"] ["fullname"].value;
+        if (x == null || x =="") {
+            alert("Name, Email, password, must be filled out");
+               return false;
+        }
+    }
+    </script>
+</body>
+</html>
+
+
